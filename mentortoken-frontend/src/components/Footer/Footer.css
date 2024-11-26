@@ -1,0 +1,99 @@
+footer {
+    width: screen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232323;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 24px;
+    padding: 100px;
+    font-family: "Inter";
+}
+
+footer h4 {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 18px;
+}
+
+footer p, a{
+    margin: 0;
+    padding: 0.5em;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-container {
+    width: 100%;
+    gap: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 310px;
+    font-size: 16px;
+}
+
+.footer-logo p {
+    padding-top: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 2px; 
+}
+
+.footer-links p:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.footer-social h4 {
+    padding: 0.5em 0 0 0;
+    margin: 0
+}
+
+.social-icons {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icons a {
+    margin: 0;
+    width: 2.1em;
+    padding: 0.5em 1em 0.5em 0;
+}
+
+footer hr {
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    color: inherit;
+    border-bottom: 1px solid;
+}
+
+.footer-bottom {
+    width: 100%;
+}

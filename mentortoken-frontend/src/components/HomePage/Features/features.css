@@ -1,0 +1,54 @@
+.features-container {
+    width: screen;
+    position: relative;
+    margin: 20px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(119.44deg, #696CFF 21.89%, #9574FF 74.83%);
+    border-radius: 20px;
+}
+
+.features-container h4 {
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+}
+
+.features-about {
+    margin: 20px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-about p {
+    margin: 0;
+    font-size: 2.2em;
+    text-align: center;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.features-card-container {
+    max-width: 1600px;
+    min-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.rocket {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 0;
+    transform: translateY(-50%);
+    right: 20px;
+}
