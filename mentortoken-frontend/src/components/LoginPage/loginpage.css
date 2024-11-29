@@ -1,0 +1,102 @@
+.login-page-container {
+    position: relative;
+    display: flex;
+    flex-direction: screen;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 1024px;
+    background: linear-gradient(177.44deg, #696CFF 21.89%, #9574FF 74.83%);
+}
+
+.login-background {
+    opacity: 60%;
+}
+
+.login-page-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+    color: #FFFFFF;
+    padding: 100px 0 100px 80px;
+    padding-top: 80px;
+    padding-left: 60px;
+    width: 450px;
+    height: 824px;
+}
+
+.login-page-info h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 90px;
+}
+
+.login-rocket {
+    position: absolute;
+    width: 80%;
+    bottom: 0px;
+    left: -57%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.login-page-info span {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.login-page-logo {
+    position: absolute;
+    bottom: 120px;
+    width:  fit-content;
+    z-index: 3;
+}
+
+.login-page-logo a {
+    padding: 0;
+    z-index: 2;
+}
+
+.login-page-logo p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-section {
+    margin: 0;
+    padding: 100px 100px 100px 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 630px;
+    height: 824px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.mentor-logo-img {
+    width: 55px;
+    height: auto;
+}
+
+.login-page-components {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 730px;
+}

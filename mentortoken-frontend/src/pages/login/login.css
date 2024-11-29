@@ -1,0 +1,65 @@
+.login-page-components h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 34px;
+    line-height: 90px;
+    color: #566A7F;
+}
+
+.login-page-components span {
+    padding: 0 0 90px 0;
+    color: #AAB4BF;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.login-page-components p {
+    padding: 0;
+    color: #566A7F;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.login-page-components a {
+    font-weight: 600;
+    color: #696CFF;
+}
+
+.login-form {
+    z-index: 2;
+}
+
+.login-form input::placeholder {
+    color: rgba(170, 180, 191, 1);
+
+}
+
+.login-form button {
+    margin-top: 100px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input img {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    transition: 0.3s;
+
+}
+
+.password-input img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+

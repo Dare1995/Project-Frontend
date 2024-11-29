@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "../../components/Button/Button.jsx";
 import rightArrow from "../../images/arrow-right.svg"
 import MemberCard from "../../components/MemberCard/memberCard.jsx"
-import getMembersData from "../../components/MemberCard/memberFrames.js";
+import getMembersData from "../../components/MemberCard/memberData.jsx";
 import "./about.css"
 
 const AboutPage = () => {

@@ -1,0 +1,27 @@
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+}
+
+.logo-container:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.logo-container h2 {
+    margin: 0;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 27.42px;
+}
+
+.logo-container svg {
+    width: 39px;
+    height: 39px;
+}
+
+.my-svg-logo path {
+    fill: white;
+}
