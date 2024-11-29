@@ -16,7 +16,8 @@ footer h4 {
     font-size: 18px;
 }
 
-footer p, a{
+footer p,
+a {
     margin: 0;
     padding: 0.5em;
     font-size: 16px;
@@ -49,7 +50,7 @@ footer p, a{
     display: flex;
     flex-direction: column;
     justify-content: left;
-    gap: 2px; 
+    gap: 2px;
 }
 
 .footer-links p:hover {
@@ -96,4 +97,63 @@ footer hr {
 
 .footer-bottom {
     width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        width: screen;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 40px 100px 40px;
+    }
+
+    footer h4 {
+        cursor: default;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 16px;
+    }
+
+    footer p, a {
+        cursor: default;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .footer-container {
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        font-family: "Inter";
+        width: 310px;
+        font-size: 16px;
+    }
+
+    .footer-logo p {
+        padding-top: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-contact {
+        display: none;
+    }
+
+    .footer-social {
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+    }
+
 }

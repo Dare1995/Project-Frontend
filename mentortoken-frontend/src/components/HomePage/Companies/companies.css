@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.companies {
+.companies-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,18 +17,18 @@
 
 .companies-logo-top,
 .companies-logo-bottom {
-  width: 100%;
-  margin: 40px;
-  max-width: 1600px;
-  min-width: 1300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 6em;
+    width: 100%;
+    margin: 40px;
+    max-width: 1600px;
+    min-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6em;
 }
 
-.companies div {
+.companies-logo div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,45 +53,44 @@
 }
 
 
-/* @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
 
-.companies-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.companies {
-    margin: 20px;
-    width: screen;
-    display: flex;
-    flex-direction: column;
-}
-.companies-logo {
-    width: 180px;
-    margin: 0;
-    max-width: 350px;
-    min-width: 100px;
-    display: flex;
-    flex-direction: column;
-}
+    .companies-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.companies div {
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
+    .companies-logo {
+        margin: 20px;
+        width: screen;
+        display: flex;
+        flex-direction: row;
+    }
 
-.companies-logo-top svg,
-.companies-logo-bottom svg {
-    height: 30px;
-}
+    .companies-logo-top,
+    .companies-logo-bottom {
+        width: 180px;
+        margin: 0;
+        max-width: 350px;
+        min-width: 100px;
+        display: flex;
+        flex-direction: column;
+    }
 
-.companies-container p{
-    padding-top: 0;
-    text-align: center;
-    font-size: 16px;
-    line-height: 25.6px;
-}
+    .companies-logo-top,
+    .companies-logo-bottom div {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
 
-} */
+.companies-container p {
+        padding-top: 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 25.6px;
+    }
+
+}

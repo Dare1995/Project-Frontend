@@ -13,7 +13,7 @@ import "./companies.css"
 const Companies = () => {
     return (
         <div className="companies-container">
-            <div className="companies">
+            <div className="companies-logo">
 
                 <div className="companies-logo-top">
                     <div><AdobeLogo /></div>

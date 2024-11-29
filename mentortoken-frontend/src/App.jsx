@@ -6,20 +6,19 @@ import "@fontsource/inter";
 import AboutPage from "./pages/about/about";
 import ContactPage from "./pages/contact/contact";
 import LoginPage from "./pages/login/login";
+import MainLayout from "./pages/layout/layout";
 
 function App() {
- 
-return (
+
+  return (
     <>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/login" element={<LoginPage/>} />     
+        <Route path="/" element={<MainLayout nav={true} footer={true}> <HomePage /> </MainLayout>}></Route>
+        <Route path="/about" element={<MainLayout nav={true} footer={true}> <AboutPage /> </MainLayout>} />
+        <Route path="/contact" element={<MainLayout nav={true} footer={true}> <ContactPage /> </MainLayout>} />
+        <Route path="login" element={<LoginPage />}></Route>
       </Routes>
-      <Footer />
-     </>
+    </>
   )
 }
 
