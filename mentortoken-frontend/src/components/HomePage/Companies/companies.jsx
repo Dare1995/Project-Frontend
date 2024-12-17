@@ -15,21 +15,22 @@ const Companies = () => {
         <div className="companies-container">
             <div className="companies-logo">
 
-                <div className="companies-logo-top">
-                    <div><AdobeLogo /></div>
-                    <div><BrazeLogo /></div>
-                    <div><HellosignLogo /></div>
-                    <div><MazeLogo /></div>
-                    <div><GhostLogo /></div>
+                <div className="companies-logo-row">
+                    <div><AdobeLogo/></div>
+                    <div><BrazeLogo/></div>
+                    <div><HellosignLogo/></div>
+                    <div><MazeLogo/></div>
+                    <div><GhostLogo/></div>
                 </div>
 
-                <div className="companies-logo-bottom">
-                    <div><AtlassianLogo /></div>
-                    <div><TreehouseLogo /></div>
-                    <div><IntercomLogo /></div>
-                    <div><OpendoorLogo /></div>
-                    <div><HubspotLogo /></div>
+                <div className="companies-logo-row">
+                    <div><AtlassianLogo/></div>
+                    <div><TreehouseLogo/></div>
+                    <div><IntercomLogo/></div>
+                    <div><OpendoorLogo/></div>
+                    <div><HubspotLogo/></div>
                 </div>
+            
             </div>
             <p>More than 25+ Startups around the <br /> world trusted Mentor Token.</p>
         </div>

@@ -23,7 +23,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -40,19 +40,15 @@ const LoginPage = () => {
     
             const jwt_token = await response.json();
             if (jwt_token && jwt_token.token) {
-                localStorage.setItem("jwt_token", jwt_token.token);
+              localStorage.setItem('jwt_token', jwt_token.token);
             }
-    
-            // Separate token decoding logic
+            
             const decodedToken = jwtDecode(jwt_token.token);
-    
-            // Redirect to homepage
-            navigate("/");
-    
-        } catch (error) {
+            decodedToken.type === 'mentor' ?  navigate("/mentorDashboard") : navigate("/companyDashboard");
+          } catch (error) {
             console.log("This is the error: ", error);
             setError(`Failed to login. Please check your email and password. ${error.toString()}`);
-        }
+          }
     };
 
     return (
@@ -63,10 +59,10 @@ const LoginPage = () => {
                     <h2>LOG IN TO MENTOR TOKEN</h2>
                     <span>Enter your email and password to login.</span>
 
-                    <form className='login-form' onSubmit={handleLogin}>
+                    <form className="login-form" onSubmit={handleLogin}>
                         <InputWithLabel
                             value={email}
-                            label='Email'
+                            label="Email"
                             id="email"
                             onChange={(e) => setEmail(e.target.value)}
                             type="email"
@@ -75,10 +71,10 @@ const LoginPage = () => {
                             autoComplete="email"
                         />
 
-                        <div className='password-input'>
+                        <div className="password-input">
                             <InputWithLabel
                                 value={password}
-                                label='Password'
+                                label="Password"
                                 id="password"
                                 onChange={(e) => setPassword(e.target.value)}
                                 type={revealPassword ? "text" : "password"}
@@ -89,13 +85,13 @@ const LoginPage = () => {
 
                             <img src={revealPassword ? CloseEye : OpenEye} onClick={(e) => handleLook(e)} />
                         </div>
-                        {/* <p>Forgot password? <Link to="/passwordReset">Password reset.</Link></p> */}
+                        <p><Link to="/forgotpassword">Forgot password?</Link></p>
 
                         <Button name={"Log in"} width={"100%"} />
 
                     </form>
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
-                    <p>Don't have account? <Link to="/register"> Register.</Link></p>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                    <p>Don"t have account? <Link to="/register"> Register.</Link></p>
                 </>
             }
         />

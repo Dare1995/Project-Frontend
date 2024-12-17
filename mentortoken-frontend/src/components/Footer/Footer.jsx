@@ -15,8 +15,8 @@ const Footer = () => {
                 </div>
                 <div className="footer-links">
                     <h4>Pages</h4>
-                    <p>Home</p>
-                    <p>Contact US</p>
+                    <p><Link to="/">Home</Link></p>
+                    <p><Link to="contact">Contact US</Link></p>
                 </div>
                 <div className="footer-contact">
                     <h4>Contact</h4>

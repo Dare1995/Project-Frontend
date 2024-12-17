@@ -4,14 +4,12 @@
     flex-direction: screen;
     justify-content: center;
     align-items: center;
-    width: 1440px;
-    height: 1024px;
-    background: linear-gradient(177.44deg, #696CFF 21.89%, #9574FF 95%);
-    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(170.40deg, #696CFF 30%, #9574FF 70%);
 }
 
 .login-background {
-    opacity: 60%;
+    opacity: 0.6;
 }
 
 .login-page-info {
@@ -23,9 +21,7 @@
     justify-content: space-between;
     align-items: normal;
     color: #FFFFFF;
-    padding: 100px 0 100px 80px;
-    padding-top: 80px;
-    padding-left: 60px;
+    padding: 80px 0 100px 60px;
     width: 450px;
     height: 824px;
 }

@@ -4,7 +4,7 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: #232323;
-    color: rgba(255, 255, 255, 0.75);
+    color: #FFFFFF;
     line-height: 24px;
     padding: 100px;
     font-family: "Inter";
@@ -16,8 +16,7 @@ footer h4 {
     font-size: 18px;
 }
 
-footer p,
-a {
+footer p {
     margin: 0;
     padding: 0.5em;
     font-size: 16px;
@@ -79,12 +78,9 @@ a {
     padding-top: 1em;
     display: flex;
     flex-direction: row;
-}
-
-.social-icons a {
     margin: 0;
     width: 2.1em;
-    padding: 0.5em 1em 0.5em 0;
+    gap: 16px;
 }
 
 footer hr {
@@ -115,7 +111,7 @@ footer hr {
         font-size: 16px;
     }
 
-    footer p, a {
+    footer p {
         cursor: default;
         margin: 0;
         padding: 0.5em;

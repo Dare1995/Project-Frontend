@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Button from "../../components/Button/Button.jsx";
 import rightArrow from "../../images/arrow-right.svg"
-import MemberCard from "../../components/MemberCard/memberCard.jsx"
-import getMembersData from "../../components/MemberCard/memberData.jsx";
+import MemberCard from "../../components/Aboutpage/memberCard.jsx"
+import getMembersData from "../../components/Aboutpage/memberData.jsx";
 import "./about.css"
 
 const AboutPage = () => {

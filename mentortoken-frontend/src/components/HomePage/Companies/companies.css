@@ -1,6 +1,6 @@
 .companies-container {
-    width: screen;
     margin: 100px 80px;
+    width: screen;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,21 +11,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-.companies-logo-top,
-.companies-logo-bottom {
+.companies-logo-row {
     width: 100%;
     margin: 40px;
     max-width: 1600px;
     min-width: 1300px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    gap: 6em;
+    gap: 4em;
 }
 
 .companies-logo div {
@@ -36,20 +33,19 @@
     width: 180px;
 }
 
-.companies-logo-top,
-.companies-logo-bottom svg {
+.companies-logo-row {
     height: 40px;
 }
 
 .companies-container p {
     margin: 0;
-    padding-top: 20px;
+    padding-top:  20px;
+    background: radial-gradient(91.58% 100% at 50% 50%, #232323 0%, rgba(35, 35, 35, 0.3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     font-size: 24px;
-    text-align: center;
     line-height: 38.4px;
-    color: #232323;
-    opacity: 0.8;
 }
 
 
@@ -70,8 +66,7 @@
         flex-direction: row;
     }
 
-    .companies-logo-top,
-    .companies-logo-bottom {
+    .companies-logo-row {
         width: 180px;
         margin: 0;
         max-width: 350px;
@@ -80,14 +75,13 @@
         flex-direction: column;
     }
 
-    .companies-logo-top,
-    .companies-logo-bottom div {
+    .companies-logo-row div {
         padding-top: 10px;
         padding-bottom: 20px;
     }
 
-.companies-container p {
-        padding-top: 0;
+    .companies-container p{
+        padding-top: 30px;
         text-align: center;
         font-size: 16px;
         line-height: 25.6px;

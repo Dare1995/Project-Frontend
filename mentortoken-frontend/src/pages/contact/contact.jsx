@@ -49,8 +49,8 @@ const ContactPage = () => {
         </div>
 
         <form className="lets-talk-form" onSubmit={sendMessage}>
-          <div className="lets-talk-name-email">
 
+          <div className="lets-talk-name-email">
             <input
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}

@@ -1,0 +1,109 @@
+.mentor-register-form {
+    position: relative;
+    z-index: 1;
+}
+
+.mentor-register-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mentor-register-form button {
+    margin: 80px 0 10px 0;
+    z-index: 5;
+}
+
+::placeholder {
+    opacity: 0.7;
+}
+
+.backwards-button {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.select-photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photo-select-input-mentor {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    max-width: 240px;
+}
+
+.policyTerms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.policyTerms span {
+    font-size: 12px;
+    padding: 0;
+}
+
+.policyTerms a {
+    font-size: 12px;
+    color: rgba(105, 108, 255, 1);
+}
+
+.policyTerms input {
+    margin: 0 1em 0 0;
+    z-index: 5;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+.skills-section .input-container {
+    margin: 0;
+}
+
+.skills-section .input-container input {
+    width: 300px;
+}
+
+.skills-section button {
+    margin: 0;
+}
+
+.skills-display {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: fit-content;
+    z-index: 5;
+}
+
+.skills-display p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    height: 20px;
+    color: black;
+    margin-right: 10px;
+}
+
+.skills-display button {
+    margin: 0 5px;
+    padding: 0px 3px;
+    border-radius: 5px;
+    border-color: gray;
+}
