@@ -1,0 +1,16 @@
+.logout-icon-open {
+    position: sticky;
+    bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    align-items: center;
+    width: inherit;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logout-icon-closed {
+    width: 0px;
+    overflow: hidden;
+}

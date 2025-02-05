@@ -1,0 +1,153 @@
+.view-job {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 150px; */
+}
+
+.view-card {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    min-height: 400px;
+    height: fit-content;
+    padding: 20px 30px 40px 40px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+.view-card .picture-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    box-sizing: border-box;
+
+}
+
+.view-card .picture-name img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset, rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+
+}
+
+.view-card .picture-name p {
+    margin: 0;
+    color: #566A7F;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.view-card .job-name {
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    color: #757D8A;
+    font-size: 15px;
+}
+
+.about-job {
+    width: inherit;
+    min-height: inherit;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.close-icon img:hover {
+    cursor: pointer;
+}
+
+.view-card .job-desc {
+    margin: 0;
+    padding: 0 5px 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 145px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(105, 108, 255, 0.16) #F1F1F1;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    color: #757D8A;
+    font-size: 13px;
+
+}
+
+.view-card .company-apply-button {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.view-card .company-apply-button button {
+    padding: 3px 35px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+/* .skill_section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+
+.edit_form_cancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.edit_form_cancel img:hover {
+    cursor: pointer;
+} */
+
+/* .span_line {
+    font-size: 20px;
+    font-weight: 400;
+} */
+
+/* .about_skills_required{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    gap:5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    font-size: 15px;
+  } */

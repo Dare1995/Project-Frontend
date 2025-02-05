@@ -4,6 +4,7 @@ import InputWithLabel from "../../InputWithLabel/inputwithlabel"
 import Logo from "../../../images/logo.svg"
 import ArrowLeft from "../../../images/arrow-left.svg"
 import Button from "../../Button/Button"
+import PhotoSelection from "../PhotoSelection.jsx/photoselection.jsx"
 import "./registermentor.css"
 
 const RegisterMentor = ({
@@ -64,13 +65,12 @@ const RegisterMentor = ({
                     const reader = new FileReader();
                     reader.onloadend = () => {
                         setImage(reader.result);
-                        console.log(typeof (e).target.result, " This is the type Logo picture to be uploaded");
+                        console.log(typeof reader.result, " This is the type Logo picture to be uploaded");
                     };
                     reader.readAsDataURL(blob);
                 });
         }
     }, []);
-
 
     const mentorRegister = async (e) => {
         e.preventDefault();
@@ -151,6 +151,7 @@ const RegisterMentor = ({
                     placeholder="xxx-xxx-xxx"
                     required
                 />
+
                 <InputWithLabel
                     value={role}
                     style={{
@@ -189,7 +190,7 @@ const RegisterMentor = ({
                         </p>
                     ))}
                 </div>
-                <textarea
+                <textarea className="desc-textarea"
                     type="text"
                     name="description"
                     placeholder="Tell us some words about you"

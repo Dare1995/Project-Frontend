@@ -52,7 +52,7 @@
 
 .policyTerms a {
     font-size: 12px;
-    color: rgba(105, 108, 255, 1);
+    color: #696CFF;
 }
 
 .policyTerms input {
@@ -106,4 +106,23 @@
     padding: 0px 3px;
     border-radius: 5px;
     border-color: gray;
+}
+
+.desc-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.desc-textarea:focus {
+    border-color: #696CFF;
+    box-shadow: 0 0 5px #696CFF(76, 175, 80, 0.5);
 }

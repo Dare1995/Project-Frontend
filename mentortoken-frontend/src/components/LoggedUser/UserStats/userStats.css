@@ -1,0 +1,211 @@
+.user-stats {
+    margin-top: 50px;
+    width: inherit;
+    box-sizing: border-box;
+}
+
+.user-stats h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 5px;
+    color: rgba(64, 77, 97, 1);
+}
+
+.mentor-back-btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mentor-back-btn button {
+    padding: 8px 20px;
+    gap: 5px;
+    background-color: rgba(105, 108, 255, 1);
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.user-stats-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: 280px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.user-stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    background-color: #FFFFFF;
+    padding: 20px 35px;
+    border-radius: 21px;
+    width: fit-content;
+    height: inherit;
+    box-sizing: border-box;
+}
+
+.stats-card-photo {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+.photo-stats-card {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+
+.photo-stats-status {
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.card-items {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+}
+
+.name-linkedin {
+    display: flex;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+.name-linkedin h2 {
+    white-space: nowrap;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    color: #566A7F;
+    padding: 0;
+}
+
+.name-linkedin img {
+    width: 14px;
+}
+
+.user-stats-desc {
+    white-space: nowrap;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    padding-bottom: 10px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    color: #696CFF;
+}
+
+.user-stats-email-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 5px;
+}
+
+.user-stats-email-phone span {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    color: #566A7F;
+}
+
+.user-about-section {
+    width: 77%;
+    padding: 20px 35px;
+    border-radius: 21px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.user-about-section p {
+    padding-right: 60px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #566A7F;
+    line-height: 14.5px;
+    height: 132px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #566A7F #F1F1F1;
+}
+
+.about-edit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.about-edit span {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #696CFF;
+}
+
+.about-edit img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.about-skills {
+    gap: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.about-skills span {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stats-card-button {
+    padding: 8px 25px;
+    gap: 5px;
+    background-color: #696CFF;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.stats-card-button img {
+    width: 12px;
+    height: 12px;
+}
+
+.sendDitrectAplication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    padding-top: 100px;
+    position: absolute;
+    top: -105px;
+    left: -40px;
+    right: -10px;
+    bottom: 0px;
+    min-height: 100vh;
+    background: #566A7F;
+    z-index: 10;
+    margin: 0;
+}

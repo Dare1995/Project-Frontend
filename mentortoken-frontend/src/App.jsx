@@ -7,6 +7,11 @@ import ContactPage from "./pages/contact/contact";
 import LoginPage from "./pages/login/login";
 import RegisterPage from "./pages/register/register"
 import ForgotPassword from "./pages/resetpassword/resetpassword";
+import MentorDashboard from "./pages/dashboard/MentorDashboard/MentorDashboard";
+import CompanyDashboard from "./pages/dashboard/CompanyDashboard/CompanyDashboard";
+import MentorStats from "./pages/dashboard/MentorStats/MentorStats";
+import ProtectedRoutes from "./pages/protected/protectedRoutes";
+import MentorJobFeed from "./pages/dashboard/MentorJobFeed/MentorJobFeed";
 
 function App() {
 
@@ -19,6 +24,10 @@ function App() {
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
+        <Route path="/mentorDashboard" element={<ProtectedRoutes><MainLayout sidebarLayout={true} type="mentor"><MentorDashboard /></MainLayout></ProtectedRoutes>} />
+        <Route path="/mentorStats" element={<ProtectedRoutes><MainLayout sidebarLayout={true} type="mentor"><MentorStats /></MainLayout></ProtectedRoutes>} />
+        <Route path="/mentorJobFeed" element={<ProtectedRoutes><MainLayout sidebarLayout={true} type="mentor"><MentorJobFeed /></MainLayout></ProtectedRoutes>} />
+        <Route path="/companyDashboard" element={<ProtectedRoutes><MainLayout sidebarLayout={true} type="company"><CompanyDashboard /></MainLayout></ProtectedRoutes>} />
       </Routes>
     </>
   )

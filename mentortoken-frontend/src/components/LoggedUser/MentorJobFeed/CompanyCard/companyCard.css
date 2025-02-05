@@ -1,0 +1,143 @@
+.company-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 200px;
+    height: 230px;
+    padding: 15px 30px 20px 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 21px;
+}
+
+.company-card-wide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    box-sizing: border-box;
+    height: 250px;
+    padding: 15px 30px 20px 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 21px;
+}
+
+.card-job-name {
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    color: rgba(86, 106, 127, 1);
+    font-size: 15px;
+}
+
+.card-desc {
+    margin: 0;
+    padding: 0 5px 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 75px;
+    overflow: hidden;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    color: rgba(117, 125, 138, 1);
+    font-size: 13px;
+}
+
+.picture-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.picture-name img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset, rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+}
+
+.picture-name p {
+    margin: 0;
+    color: rgba(86, 106, 127, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.company-card_button {
+    padding-left: 10px;
+}
+
+.company-card_button button {
+    padding: 2px 20px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 9.5px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.applied-users-section {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.applied-users-section button {
+    padding: 2px 20px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 9.5px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.applied-users-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.applied-users-info p {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 8.75px;
+    font-weight: 400;
+    color: rgba(117, 125, 138, 1);
+}
+
+.applied-users-pictures {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.applied-users-pictures img {
+    width: 30px;
+    height: 30px;
+    border: 1.03px solid var(--Purple-50, rgba(245, 245, 249, 1));
+    border-radius: 15px;
+}
+
+.applied-users-picture1 {
+    z-index: 5;
+}
+
+.applied-users-picture2 {
+    margin-left: -10px;
+    z-index: 10;
+}
+
+.applied-users-picture3 {
+    margin-left: -10px;
+    z-index: 15;
+}
