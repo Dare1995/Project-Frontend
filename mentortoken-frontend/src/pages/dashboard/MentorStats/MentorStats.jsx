@@ -1,7 +1,7 @@
 import React, { useState }  from 'react'
 import './MentorStats.css'
 import UserStats from '../../../components/LoggedUser/UserStats/userStats.jsx'
-import Statistics from '../../../components/LoggedUser/MentorStats/Statistics/statistics.jsx'
+import Statistics from '../../../components/LoggedUser/Statistics/statistics.jsx'
 import QuickOverview from '../../../components/LoggedUser/MentorStats/QuickOverview/quickOverview.jsx'
 import EditMentor from '../../../components/LoggedUser/MentorStats/EditMentor/editMentor.jsx'
 

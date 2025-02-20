@@ -99,19 +99,20 @@ const CreateNewJob = ({ exitEdit, isDirectJob = true, mentorId = null, refreshFe
     }, [])
 
     return (
-        <form className="create_job_form">
-            <div className="create_job_form_cancel">
+        <form className="create-job-form">
+            <div className="cancel-job-form">
                 <img src={XbtnCircle} onClick={cancelEdit}></img>
             </div>
             {isDirectJob ? <div className="offer_job_text">
-                <h2>Offer Job </h2>
+                <h2>OFFER JOB</h2>
                 <span>Create and offer job to a mentor</span>
             </div> : <div className="offer_job_text">
                 <h2>Create new job</h2>
                 <span>Create and offer job to all mentors</span>
             </div>}
-            <div className="category_selection_input">
-                <label for="category">Choose category:</label>
+            <div className="category-selection-input">
+                {/* <label for="category">Choose category:</label> */}
+                <label htmlFor="category">Choose category:</label>
                 <select id="category" name="category" onChange={(e) => setCategory(e.target.value)}>
                     <option value="other">Other</option>
                     <option value="software">Software</option>
@@ -129,7 +130,7 @@ const CreateNewJob = ({ exitEdit, isDirectJob = true, mentorId = null, refreshFe
                 placeholder={"Job Name"}
                 required
             />
-            <div className="skill_section">
+            <div className="skill-section">
                 <InputWithLabel
                     value={skill}
                     label="Skill"
@@ -144,7 +145,7 @@ const CreateNewJob = ({ exitEdit, isDirectJob = true, mentorId = null, refreshFe
                     mySubmit={(e) => { addSkill(e) }}
                 />
             </div>
-            <div className="skills_display">
+            <div className="skills-display">
                 {skills.map((skil, index) => (
                     <p key={index}>{skil}
                         <button

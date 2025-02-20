@@ -1,0 +1,63 @@
+.send-open-application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(86, 106, 127, 0.5);
+    z-index: 20;
+    padding-top: 150px;
+    margin: 0;
+}
+
+.company-jobs {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    margin-bottom: 40px;
+}
+
+.company-jobs h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 5px;
+    color: #404D61;
+}
+
+.company-jobs-tittle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+.stats-card-button {
+    padding: 10px 25px;
+    gap: 5px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.stats-card-button img {
+    padding-bottom: 2px;
+}
+
+.company-jobs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 23px;
+    row-gap: 25px;
+}

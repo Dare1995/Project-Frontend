@@ -26,7 +26,9 @@ const Navbar = () => {
 
             <div className="header-login">
                 <Link to="/login">Login</Link>
-                <Button name={"Get Started"} img_src={rightArrow} />
+                <Link to="/login">
+                    <Button name={"Get Started"} img_src={rightArrow} />
+                </Link>
             </div>
 
         </header>

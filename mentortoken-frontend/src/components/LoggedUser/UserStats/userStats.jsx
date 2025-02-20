@@ -15,7 +15,7 @@ const UserStats = ({ title = "mentor", handleEditMentor, handleExitMentor, edit,
   const [userData, setUserData] = useState({});
   const [userDataSkills, setUserDataSkills] = useState([]);
   const [offerJob, setOfferJob] = useState(false);
-  
+
   const getUser = async () => {
     try {
       const userResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/auth`, {
@@ -71,7 +71,7 @@ const UserStats = ({ title = "mentor", handleEditMentor, handleExitMentor, edit,
   }, [])
 
   useEffect(() => {
-  if (token !== "" && title === "mentor") {
+    if (token !== "" && title === "mentor") {
       getUser();
     } else if (token !== "" && title === "company" && mentorId) {
       getMentor(mentorId);

@@ -1,0 +1,14 @@
+.my-mentors-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px 0 0px;
+}
+
+.company-overview {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    box-sizing: border-box;
+}

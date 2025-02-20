@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PhotoCam from "../../../../images/loginpage/PhotoCam.svg";
 import LinkedinLogo from "../../../../images/socialmedia/LinkedInLogo.svg";
-import "./MentorReviewCard.css";
+import "./mentorReviewCard.css";
 
-const MentorReviewCard = ({ mentor = {}, handleViewMentor, jobApplication = {}, type = "mentor", handleRenew, handleViewMore }) => {
-    //   const [token, setToken] = useState(`${localStorage.getItem("jwt_token")}`);
+const MentorReviewCard = ({ mentor = {}, handleViewMentor, jobAplication = {}, type = "mentor", handleRenew, handleViewMore }) => {
+    const [token, setToken] = useState("");
 
     const userDataSkills = mentor.skills;
 
@@ -43,11 +43,16 @@ const MentorReviewCard = ({ mentor = {}, handleViewMentor, jobApplication = {}, 
         handleViewMentor(mentorId);
     };
 
+     useEffect(() => {
+        const tokken = localStorage.getItem("jwt_token");
+        setToken(tokken);
+      }, []);
+
     return (
 
-        <div className="mentor-review_card">
+        <div className="mentor-review-card">
             {!mentor.skills ?
-                <div className="review-Card_Loading">
+                <div className="review-card-loading">
                     {
                         type === "mentor" ? <h3>Loading...</h3> : <h3>No data!</h3>
                     }
@@ -75,20 +80,20 @@ const MentorReviewCard = ({ mentor = {}, handleViewMentor, jobApplication = {}, 
                         </div>
                     </div>
                     {
-                        type === "mentor" ? <div className="visit-mentor_class">
+                        type === "mentor" ? <div className="visit-mentor-class">
                             <button type="button"
                                 onClick={(e) => handleVisitMentor(e, mentor._id)}
                             >View Mentor</button>
                         </div> :
-                            <div className="decide-pending_app">
-                                <button className="accept_button" onClick={(e) => handlePending("assigned", jobApplication._id)}>Assign Job</button>
-                                <button className="reject_button" onClick={(e) => handlePending("rejected", jobApplication._id)}>Reject</button>
+                            <div className="decide-pending-app">
+                                <button className="accept_button" onClick={(e) => handlePending("assigned", jobAplication._id)}>Assign Job</button>
+                                <button className="reject_button" onClick={(e) => handlePending("rejected", jobAplication._id)}>Reject</button>
                             </div>
                     }
                 </>
             }
         </div>
-    );
-};
+    )
+}
 
 export default MentorReviewCard

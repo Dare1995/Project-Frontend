@@ -1,85 +1,99 @@
-.create_job_form{
+.create-job-form {
     width: 500px;
     height: fit-content;
-    padding:  30px 50px 50px 50px;
-    background-color: rgba(255, 255, 255, 1);
+    padding: 30px 50px 50px 50px;
+    background-color: #FFFFFF;
     border-radius: 20px;
     z-index: 200;
     position: sticky;
-    top:50px;
+    top: 50px;
 }
 
 .offer_job_text {
     padding-bottom: 20px;
 }
-.create_job_form h2{
+
+.create-job-form h2 {
     font-family: "Manrope", sans-serif;
     font-size: 34px;
     font-weight: 700;
-    color: rgba(86, 106, 127, 1);
+    color: #566A7F;
     margin: 0;
     padding: 0 0 10px 0;
 }
 
-.create_job_form span{
+.create-job-form span {
     font-family: "Manrope", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: rgba(86, 106, 127, 0.6);
+    color: #566A7F;
 }
 
-.create_job_form textarea{
-    width: 100%;
-    box-sizing: border-box;
+.create-job-form textarea {
+    width: 478px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #D3D3FF;
+    font-family: "Manrope", sans-serif;
+    font-size: 14.67px;
+    color: #AAB4BF;
     margin-bottom: 20px;
+    resize: none;
+    transition: border-color 0.3s ease;
 }
 
-.create_job_form_cancel{
+.create-job-form textarea:focus {
+    border-color: #696CFF;
+    outline: none;
+}
+
+.cancel-job-form {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     justify-content: end;
 }
-.create_job_form_cancel img:hover{
-cursor: pointer;
+
+.cancel-job-form img:hover {
+    cursor: pointer;
 }
 
 .text_area_description {
     position: relative;
 }
+
 .text_area_description label {
     position: absolute;
     top: 10px;
-    left: 24px;
-    background-color: white;
     padding: 0 5px;
     font-size: 15px;
-    color: rgba(105, 108, 255, 0.8);
+    color: #696CFF;
+}
 
-  }
-
-  .text_area_description textarea {
- padding: 20px; 
+.text_area_description textarea {
+    margin-top: 40px;
 }
 
 
-.category_selection_input select{
+.category-selection-input select {
     margin-left: 10px;
     border-color: white;
     font-family: "Manrope", sans-serif;
     font-size: 14.67px;
     font-weight: 500;
-    color: rgba(86, 106, 127, 1);
+    color: #566A7F;
+    padding: 10px 0px 20px 0px;
 }
 
-.category_selection_input label{
+.category-selection-input label {
     font-family: "Manrope", sans-serif;
     font-size: 14.67px;
     font-weight: 500;
-    color: rgba(86, 106, 127, 1);
+    color: #566A7F;
 }
 
-.skill_section {
+.skill-section {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -87,17 +101,20 @@ cursor: pointer;
     z-index: 5;
     width: 100%;
 }
-.skill_section .input-container{
-    margin: 0;
-}
-.skill_section .input-container input{
-    width:300px;
-}
-.skill_section button{
+
+.skill-section .input-container {
     margin: 0;
 }
 
-.skills_display {
+.skill-section .input-container input {
+    width: 300px;
+}
+
+.skill-section button {
+    margin: 0;
+}
+
+.skills-display {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -106,7 +123,8 @@ cursor: pointer;
     height: fit-content;
     z-index: 5;
 }
-.skills_display p {
+
+.skills-display p {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,7 +133,8 @@ cursor: pointer;
     color: black;
     margin-right: 10px;
 }
-.skills_display button {
+
+.skills-display button {
     margin: 0 5px;
     padding: 0px 3px;
     border-radius: 5px;

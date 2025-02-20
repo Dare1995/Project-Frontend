@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './pendingJobsCard.css';
 
 const PendingJobCard = ({ title = null, jobId, aplicationId, handleRenew }) => {
-    const [token, setToken] = useState(`${localStorage.getItem("jwt_token")}`);
+    const [token, setToken] = useState("");
 
+     useEffect(() => {
+            const token = localStorage.getItem("jwt_token");
+            setToken(token);
+        }, []);
 
     const handlePending = async (decision, appId) => {
         const status = decision;
@@ -14,7 +18,7 @@ const PendingJobCard = ({ title = null, jobId, aplicationId, handleRenew }) => {
             acceptedStatus = 'rejected';
         }
         try {
-            const aplicationEdit = await fetch(`${import.meta.env.VITE_API_URL}/api/mentor/application/${appId}`, {
+            const applicationId = await fetch(`${import.meta.env.VITE_API_URL}/api/mentor/application/${appId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,7 +29,7 @@ const PendingJobCard = ({ title = null, jobId, aplicationId, handleRenew }) => {
                     acceptedStatus,
                 }),
             });
-            const updatedApp = await aplicationEdit.json();
+            const updatedApp = await applicationId.json();
             handleRenew();
         } catch (error) {
             console.log("This is the error: ", error);
@@ -51,3 +55,4 @@ const PendingJobCard = ({ title = null, jobId, aplicationId, handleRenew }) => {
 }
 
 export default PendingJobCard
+

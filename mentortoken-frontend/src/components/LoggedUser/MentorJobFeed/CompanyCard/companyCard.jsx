@@ -5,22 +5,22 @@ import "./companyCard.css";
 
 const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, user = "mentor", company = {} }) => {
     const [appliedMentors, setAppliedMentors] = useState([]);
-    const [aplications, setAplications] = useState([]);
+    const [applications, setApplications] = useState([]);
     const [viewJobApps, setViewJobApps] = useState(false);
     const [token, setToken] = useState("");
 
-    const fetchAplications = async (ID) => {
+    const fetchApplications = async (id) => {
 
         try {
-            const aplicationsData = await fetch(`${import.meta.env.VITE_API_URL}/api/company/job/pendingApps/${ID}`, {
+            const applicationData = await fetch(`${import.meta.env.VITE_API_URL}/api/company/job/pendingApps/${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`,
                 },
             });
-            const aplications = await aplicationsData.json();
-            setAplications(aplications);
+            const applications = await applicationData.json();
+            setApplications(applications);
         } catch (error) {
             console.log("This is the error: ", error);
         }
@@ -28,7 +28,7 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
 
     const fetchMentor = async (mentorId) => {
         try {
-            const mentorData = await fetch(`${import.meta.env.VITE_API_URL}/api/user/mentorId/${mentorId}`, {
+            const mentorData = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/mentorId/${mentorId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
     };
 
     const handleRenew = () => {
-        setAplications([]);
+        setApplications([]);
         setAppliedMentors([]);
     };
 
@@ -59,16 +59,16 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
     }, []);
 
     useEffect(() => {
-        if (token !== "" && user !== "mentor" && job._id && aplications.length === 0) {
-            fetchAplications(job._id);
+        if (token !== "" && user !== "mentor" && job._id && applications.length === 0) {
+            fetchApplications(job._id);
         }
     }, [token]);
 
     useEffect(() => {
-        if (aplications.length > 0 && user !== "mentor" && appliedMentors.length === 0) {
-            aplications.forEach(app => fetchMentor(app.mentorId));
+        if (applications.length > 0 && user !== "mentor" && appliedMentors.length === 0) {
+            applications.forEach(app => fetchMentor(app.mentorId));
         }
-    }, [aplications]);
+    }, [applications]);
 
 
 
@@ -83,7 +83,7 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
                         handleViewMore={handleMore}
                         company={company}
                         mentors={appliedMentors}
-                        aplications={aplications}
+                        applications={applications}
                         handleRenew={handleRenew}
                     /> : null
             }

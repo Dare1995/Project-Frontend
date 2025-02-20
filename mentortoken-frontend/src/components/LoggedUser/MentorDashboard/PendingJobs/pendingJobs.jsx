@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import PendingJobCard from '../PendingJobsCard/pendingJobsCard';
-import './pendingJobs.css';
+import React, { useEffect, useState } from "react";
+import PendingJobCard from "../PendingJobsCard/pendingJobsCard";
+import "./pendingJobs.css";
 
 const PendingJobs = ({ renewData, handleRenew }) => {
 
     const [cardData, setCardData] = useState([]);
     const [jobs, setJobs] = useState([]);
     const [jobAplications, setJobAplications] = useState([]);
-    const [token, setToken] = useState('');
+    const [token, setToken] = useState("");
 
     const fetchMentorAssignedJobs = async () => {
         try {
             const aplicationResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/mentor/application/null/pending`, {
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
                 },
             });
             const aplicationData = await aplicationResponse.json()
@@ -23,10 +23,10 @@ const PendingJobs = ({ renewData, handleRenew }) => {
             const idList = aplicationData.map(application => application.jobId);
             if (idList.length > 0) {
                 const allJobs = await fetch(`${import.meta.env.VITE_API_URL}/api/job/ids/${idList}`, {
-                    method: 'GET',
+                    method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`,
                     },
                 });
                 const allJobsRecived = await allJobs.json();
@@ -37,22 +37,22 @@ const PendingJobs = ({ renewData, handleRenew }) => {
         }
     };
     useEffect(() => {
-        if (token !== '') {
+        if (token !== "") {
             fetchMentorAssignedJobs();
         }
     }, [token, renewData]);
 
     useEffect(() => {
-        const tokken = localStorage.getItem("jwt_token");
-        setToken(tokken);
+        const token = localStorage.getItem("jwt_token");
+        setToken(token);
     }, []);
 
     useEffect(() => {
         const jobsData = jobAplications.map((aplication, i) => {
             const job = jobs.find(job => job._id ===
                 aplication.jobId &&
-                aplication.acceptedStatus === 'pending' &&
-                aplication.applicationType === 'companyToMentor');
+                aplication.acceptedStatus === "pending" &&
+                aplication.applicationType === "companyToMentor");
             if (job) {
                 return {
                     title: job.title,
@@ -67,7 +67,7 @@ const PendingJobs = ({ renewData, handleRenew }) => {
     }, [jobs])
 
     return (
-        <div className='pending-jobs'>
+        <div className="pending-jobs">
             <h2>Pending Jobs</h2>
             <p>Jobs offered from your startup</p>
             <div className="job-list">

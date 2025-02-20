@@ -1,8 +1,42 @@
-const CompanyDashboard = () => {
-    return (
-        <h1>Company Dashboard</h1>
-    )
-}
+import { useEffect, useState }  from "react"
+import AssignedJobs from "../../../components/LoggedUser/AssignedJobs/assignedJobs.jsx";
+import BestPerfMentors from "../../../components/LoggedUser/BestPerfMentor/bestPerfMentor.jsx";
+import Statistics from "../../../components/LoggedUser/Statistics/statistics.jsx";
+import "./CompanyDashboard.css"
 
+const CompanyDashboard = () => {
+    // const [jobFilter, setJobFilter] = useState("all");
+    // const [assignedJobs, setAssignedJobs] = useState([]);
+    // const [aplications, setAplications] = useState([]);
+    const [token, setToken] = useState("");
+    const [filtered, setFiltered] = useState("all");
+   
+
+    useEffect(() => {
+      const storedToken =localStorage.getItem("jwt_token");
+      setToken(storedToken);
+
+},[]);
+
+    const handleFilteredStats = ( filter) => {
+      setFiltered(filter);
+    };
+
+  
+    return (
+      <div className="company-dashboard">
+        <div className="company-dashboard-left">
+          <AssignedJobs 
+          companyId={true}
+          handleSelectedFilter = {handleFilteredStats}
+          />
+        </div>
+        <div className="company-dashboard-right">
+          <BestPerfMentors/>
+          <Statistics filter={filtered}/>
+        </div>
+      </div>
+    )
+  }
 
 export default CompanyDashboard

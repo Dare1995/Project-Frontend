@@ -100,7 +100,7 @@ main {
     font-size: 0.8em;
 }
 
-/* .lets-talk-form textarea {
+.lets-talk-form textarea {
     resize: none;
     border: 1.1px solid #696CFF;
     border-radius: 9px;
@@ -114,9 +114,9 @@ main {
     padding: 9px 26px 9px 26px;
     width: 1072px;
     min-height: 160px;
-} */
+}
 
-.lets-talk-form textarea {
+/* .lets-talk-form textarea {
     resize: none;
     border: 1.1px solid #696CFF;
     border-radius: 9px;
@@ -130,5 +130,5 @@ main {
     padding: 8px;
     width: 1072px;
     height: 160px;
-}
+} */
 

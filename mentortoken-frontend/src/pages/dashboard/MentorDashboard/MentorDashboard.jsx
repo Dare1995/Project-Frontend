@@ -1,6 +1,6 @@
 import { useState }  from "react"
 import "./MentorDashboard.css"
-import AssignedJobs from "../../../components/LoggedUser/MentorDashboard/AssignedJobs/assignedJobs";
+import AssignedJobs from "../../../components/LoggedUser/AssignedJobs/assignedJobs";
 import PendingJobs from "../../../components/LoggedUser/MentorDashboard/PendingJobs/pendingJobs";
 import ApplicationsSent from "../../../components/LoggedUser/MentorDashboard/ApplicationsSent/applicationSent";
 

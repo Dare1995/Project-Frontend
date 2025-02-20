@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import JobListCard from '../JobListCard/jobListCard';
-import './assignedJobs.css';
+import React, { useEffect, useState } from "react";
+import JobListCard from "../JobListCard/jobListCard";
+import "./assignedJobs.css";
 
 const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSelectedFilter = (filter) => { } }) => {
 
@@ -8,15 +8,15 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
     const [cardData, setCardData] = useState([]);
     const [jobs, setJobs] = useState([]);
     const [jobAplications, setJobAplications] = useState([]);
-    const [token, setToken] = useState('');
+    const [token, setToken] = useState("");
 
-    const fetchMentorAssignedJobs = async (filter = 'all', mentorId) => {
+    const fetchMentorAssignedJobs = async (filter = "all", mentorId) => {
         try {
             const applicationResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/mentor/application/${mentorId}/${filter}`, {
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
                 },
             });
             const applicationData = await applicationResponse.json();
@@ -25,10 +25,10 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
             setJobs([]);
             if (idList.length > 0) {
                 const allJobs = await fetch(`${import.meta.env.VITE_API_URL}/api/job/ids/${idList}`, {
-                    method: 'GET',
+                    method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`,
                     },
                 });
                 const allJobsReceived = await allJobs.json();
@@ -39,13 +39,13 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
         }
     };
 
-    const fetchAssignedCompanyJobs = async (filter = 'all') => {
+    const fetchAssignedCompanyJobs = async (filter = "all") => {
         try {
             const applicationResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/company/application/${filter}`, {
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
                 },
             });
             const applicationData = await applicationResponse.json();
@@ -54,10 +54,10 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
             setJobs([]);
             if (idList.length > 0) {
                 const allJobs = await fetch(`${import.meta.env.VITE_API_URL}/api/job/ids/${idList}`, {
-                    method: 'GET',
+                    method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`,
                     },
                 });
                 const allJobsReceived = await allJobs.json();
@@ -68,13 +68,13 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
         }
     };
 
-    const fetchCompanyMentorJobs = async (mentorId, filter = 'all') => {
+    const fetchCompanyMentorJobs = async (mentorId, filter = "all") => {
         try {
             const applicationResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/company/mentorApplications/${mentorId}/${filter}`, {
-                method: 'GET',
+                method: "GET",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
                 },
             });
             const applicationData = await applicationResponse.json();
@@ -83,10 +83,10 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
             setJobs([]);
             if (idList.length > 0) {
                 const allJobs = await fetch(`${import.meta.env.VITE_API_URL}/api/job/ids/${idList}`, {
-                    method: 'GET',
+                    method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`,
                     },
                 });
                 const allJobsReceived = await allJobs.json();
@@ -120,7 +120,7 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
     }, [jobFilter, token, companyId, mentorId, renewData]);
 
     useEffect(() => {
-        if (token === '') {
+        if (token === "") {
             const tokken = localStorage.getItem("jwt_token");
             setToken(tokken);
         }
@@ -128,14 +128,14 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
 
 
     useEffect(() => {
-        if (token !== '') {
+        if (token !== "") {
             handleFetch(jobFilter);
         }
     }, [renewData, token]);
 
     useEffect(() => {
         const jobsData = jobAplications.map((aplication, i) => {
-            const job = jobs.find(job => job._id === aplication.jobId && aplication.acceptedStatus !== 'pending');
+            const job = jobs.find(job => job._id === aplication.jobId && aplication.acceptedStatus !== "pending");
             if (job) {
                 return {
                     title: job.title,
@@ -157,23 +157,23 @@ const AssignedJobs = ({ companyId = null, mentorId = null, renewData, handleSele
                 <nav>
                     <ul>
                         <li
-                            id='all'
-                            className={jobFilter === 'all' ? 'filter-nav-active' : 'filter-nav'}
+                            id="all"
+                            className={jobFilter === "all" ? "filter-nav-active" : "filter-nav"}
                             onClick={() => handleFetch("all")}
                         >All</li>
                         <li
-                            id='done'
-                            className={jobFilter === 'done' ? 'filter-nav-active' : 'filter-nav'}
+                            id="done"
+                            className={jobFilter === "done" ? "filter-nav-active" : "filter-nav"}
                             onClick={() => handleFetch("done")}
                         >Done</li>
                         <li
-                            id='rejected'
-                            className={jobFilter === 'rejected' ? 'filter-nav-active' : 'filter-nav'}
+                            id="rejected"
+                            className={jobFilter === "rejected" ? "filter-nav-active" : "filter-nav"}
                             onClick={() => handleFetch("rejected")}
                         >{(companyId === null && mentorId) ? "Canceled" : "Rejected"}</li>
                         <li
-                            id='inprogress'
-                            className={jobFilter === 'in progress' ? 'filter-nav-active' : 'filter-nav'}
+                            id="inprogress"
+                            className={jobFilter === "in progress" ? "filter-nav-active" : "filter-nav"}
                             onClick={() => handleFetch("in progress")}
                         >In Progress</li>
                     </ul>

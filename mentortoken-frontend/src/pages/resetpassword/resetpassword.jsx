@@ -67,29 +67,9 @@ const ForgotPassword = () => {
         }
     };
 
-    // const handleResetPassword = async () => {
-    //     if (newPassword !== confirmNewPassword) {
-    //         alert("Passwords do not match. Please try again.");
-    //         return;
-    //     }
-
-    //     try {
-    //         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/reset-password/${resetToken}`, {
-    //             method: "PUT",
-    //             headers: { "Content-Type": "application/json" },
-    //             body: JSON.stringify({ newPassword }),
-    //         });
-    //         const result = await response.json();
-
-    //         alert(result.message);
-    //         if (response.ok) navigate("/login");
-    //     } catch (error) {
-    //         console.error("Error resetting password:", error);
-    //     }
-    // };
     const handleResetPassword = async () => {
         try {
-            // Check if newPassword and confirmNewPassword match
+
             if (newPassword !== confirmNewPassword) {
                 alert("Passwords do not match!");
                 return;
@@ -110,9 +90,9 @@ const ForgotPassword = () => {
 
             if (passwordReset.status) {
                 alert(passwordReset.message);
-                navigate("/login"); // Redirect to login page on success
+                navigate("/login");
             } else {
-                alert(passwordReset.message); // Show error message
+                alert(passwordReset.message);
             }
         } catch (error) {
             console.log("This is the error: ", error);
@@ -198,13 +178,13 @@ const ForgotPassword = () => {
                                     alt={lookNewConfirm ? "Hide password" : "Show password"}
                                 />
                             </div>
-
+                        <div className="check-password">
                             <span>{passStrength ? <CheckIcon /> : <CloseIcon />} Password Strength: {passStrength ? "Strong" : "Weak"}</span>
                             <span>{noNameEmail ? <CheckIcon /> : <CloseIcon />} Cannot contain your email address</span>
                             <span>{eightChar ? <CheckIcon /> : <CloseIcon />} At least 8 characters</span>
                             <span>{numberSymbol ? <CheckIcon /> : <CloseIcon />} Contains a number or symbol</span>
                             <span>{passMatch ? <CheckIcon /> : <CloseIcon />} Passwords match</span>
-
+                            </div>
                             <Button name="Reset Password" width="100%" mySubmit={handleResetPassword} />
                             <p>Go to <Link to="/login">Login</Link></p>
                         </form>

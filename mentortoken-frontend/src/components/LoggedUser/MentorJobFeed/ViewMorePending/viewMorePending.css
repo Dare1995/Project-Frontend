@@ -16,13 +16,14 @@
 .view-card-pending {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 600px;
     min-height: 600px;
     height: fit-content;
     padding-top: 30px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #FFFFFF;
     border-radius: 20px;
 }
+
 
 .view-more-pending .close-icon {
     display: flex;
@@ -68,23 +69,23 @@
 
 .view-card-pending .picture-name p {
     margin: 0;
-    color: rgba(86, 106, 127, 1);
+    color: #566A7F;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 15px;
 }
 
-.view-card-pending .cart-job-name {
+.view-card-pending .card-job-name {
     padding: 0 60px;
     width: 100%;
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
     font-weight: 600;
-    color: rgba(86, 106, 127, 1);
+    color: #566A7F;
     font-size: 15px;
 }
 
-.view-card-pending .cart-desc {
+.view-card-pending .card-desc {
     margin: 0;
     padding: 0 60px;
     width: 100%;
@@ -92,10 +93,10 @@
     height: 95px;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: rgba(105, 108, 255, 0.16) #f1f1f1;
+    scrollbar-color: rgba(105, 108, 255, 0.16) #F1F1F1;
     font-family: "Manrope", sans-serif;
     font-weight: 400;
-    color: rgba(117, 125, 138, 1);
+    color: #757D8A;
     font-size: 13px;
     /* border: 1px solid black; */
 }
@@ -110,7 +111,7 @@
     box-sizing: border-box;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: rgba(105, 108, 255, 0.16) #f1f1f1;
+    scrollbar-color: rgba(105, 108, 255, 0.16) #F1F1F1;
     margin-bottom: 80px;
     padding: 0 60px 0 60px;
     /* border: 1px solid black; */
