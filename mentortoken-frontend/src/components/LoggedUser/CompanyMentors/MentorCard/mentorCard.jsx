@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MentorReviewCard from "../MentorReviewCard/mentorReviewCard.jsx";
+import MentorReviewCard from "../../MentorJobFeed/MentorReviewCard/mentorReviewCard";
 import "./mentorCard.css";
 
 const MentorCardBox = ({ handleViewMentor }) => {

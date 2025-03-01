@@ -27,7 +27,7 @@ const ViewMorePending = ({ job, image = Logo, company, handleViewMore, mentors =
                 return mentor ? (
                   <MentorReviewCard
                     key={application._id}
-                    jobAplication={application}
+                    jobApplication={application}
                     mentor={mentor}
                     type="company"
                     handleRenew={handleRenew}

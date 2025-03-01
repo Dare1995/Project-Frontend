@@ -94,3 +94,5 @@ const JobListCard = ({ title = null, acceptedStatus = null, isCompanyMentor = fa
 }
 
 export default JobListCard
+
+

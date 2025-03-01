@@ -164,8 +164,8 @@ const Statistics = ({ mentorId = null, filter = "all" }) => {
             legend: { display: false },
             tooltip: {
                 callbacks: {
-                    title: () => "", // Hide title in tooltips
-                    label: (tooltipItem) => tooltipItem.raw, // Show only the value
+                    title: () => "",
+                    label: (tooltipItem) => tooltipItem.raw,
                 },
             },
         },
@@ -188,7 +188,7 @@ const Statistics = ({ mentorId = null, filter = "all" }) => {
 
     return (
         <div className="performance-time">
-            <h2>Performance Over Time</h2>
+            <h2>Overall Statistic</h2>
             <div className="statistics-chart">
                 <h3>STATISTICS</h3>
                 <p>Overall target accomplishment over the year</p>

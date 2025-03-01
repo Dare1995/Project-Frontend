@@ -71,9 +71,6 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
     }, [applications]);
 
 
-
-
-
     return (
         <>
             {

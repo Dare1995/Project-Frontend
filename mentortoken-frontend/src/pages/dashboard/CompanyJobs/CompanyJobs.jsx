@@ -10,6 +10,12 @@ const CompanyJobs = () => {
     const [offerJob, setOfferJob] = useState(false);
     const [token, setToken] = useState("");
 
+    useEffect(() => {
+        if (token === "") {
+            setToken(localStorage.getItem("jwt_token"));
+        }
+    }, []);
+
     const fetchCompany = async () => {
         try {
             const myUser = await fetch(`${import.meta.env.VITE_API_URL}/api/auth`, {
@@ -45,12 +51,6 @@ const CompanyJobs = () => {
     const handleOpenJob = () => {
         setOfferJob(!offerJob);
     };
-
-    useEffect(() => {
-        if (token === "") {
-            setToken(localStorage.getItem("jwt_token"));
-        }
-    }, []);
 
     useEffect(() => {
         if (token !== "" && companyJobs.length === 0) {

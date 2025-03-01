@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AplicationSentCard from "../ApplicationSentCard/applicationSentCard";
+import ApplicationSentCard from "../../CompanyMentors/ApplicationSentCard/applicationSentCard";
 import "./applicationSent.css";
 
 const ApplicationsSent = ({ renewData }) => {
@@ -77,12 +77,12 @@ const ApplicationsSent = ({ renewData }) => {
       <div className="aplications-sent-list">
         {cardData.length > 0 ?
           cardData.map((job, i) => (
-            <AplicationSentCard
+            <ApplicationSentCard
               key={job.jobId}
               id={job.jobId}
               job={job}
             />
-          )) : <AplicationSentCard />
+          )) : <ApplicationSentCard />
         }
       </div>
     </div>
