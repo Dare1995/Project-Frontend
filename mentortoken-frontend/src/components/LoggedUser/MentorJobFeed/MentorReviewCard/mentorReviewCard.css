@@ -1,4 +1,4 @@
-.mentor-review_card {
+.mentor-review-card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,23 +58,15 @@
 }
 
 .visit-mentor_class {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: fit-content;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: end;
-    /* border: 1px solid black; */
+    padding-left: 10px;
 }
 
 .visit-mentor_class button {
+    padding: 2px 20px;
     font-family: "Noto Sans", sans-serif;
+    font-size: 9.5px;
     font-weight: 400;
-    font-size: 10.13px;
-    border-radius: 2px;
-    padding: 3px 5px;
-    color: rgba(255, 255, 255, 1);
+    border-radius: 6px;
 }
 
 .linkedin_name {

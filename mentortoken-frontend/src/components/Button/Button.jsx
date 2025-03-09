@@ -1,18 +1,18 @@
 import './Button.css';
 
 const Button = ({
-  name, 
-  img_src=null, 
-  width="fit-content", 
-  mySubmit, 
-  colour="#696CFF", 
-  textColour="white", 
+  name,
+  img_src = null,
+  width = "fit-content",
+  mySubmit,
+  colour = "#696CFF",
+  textColour = "white",
   disabled = false,
   type = 'submit'
 }) => {
   return (
-    <button 
-      name={name} 
+    <button
+      name={name}
       style={{
         width: width,
         type,

@@ -29,7 +29,7 @@
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
     font-weight: 600;
-    color: rgba(86, 106, 127, 1);
+    color: #566a7f;
     font-size: 15px;
 }
 
@@ -38,11 +38,11 @@
     padding: 0 5px 0 10px;
     width: 100%;
     box-sizing: border-box;
-    height: 75px;
+    height: 70px;
     overflow: hidden;
     font-family: "Manrope", sans-serif;
     font-weight: 400;
-    color: rgba(117, 125, 138, 1);
+    color: #757d8a;
     font-size: 13px;
 }
 
@@ -64,17 +64,17 @@
 
 .picture-name p {
     margin: 0;
-    color: rgba(86, 106, 127, 1);
+    color: #566a7f;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 15px;
 }
 
-.company-card_button {
+.company-card-button {
     padding-left: 10px;
 }
 
-.company-card_button button {
+.company-card-button button {
     padding: 2px 20px;
     font-family: "Noto Sans", sans-serif;
     font-size: 9.5px;
@@ -112,7 +112,7 @@
     font-family: "Manrope", sans-serif;
     font-size: 8.75px;
     font-weight: 400;
-    color: rgba(117, 125, 138, 1);
+    color: #757d8a;
 }
 
 .applied-users-pictures {

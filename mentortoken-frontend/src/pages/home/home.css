@@ -25,7 +25,7 @@ main{
     position: relative;
     margin-top: 40px;
     padding: 20px;
-    border: 5px solid rgba(105, 108, 255, 1);
+    border: 5px solid #696CFF;
     border-radius: 60px;
 }
 
@@ -45,26 +45,28 @@ main{
 @media screen and (max-width: 700px) {
     
 .home-bottom {
-    font-family: "Inter";
     margin: 20px 0px 20px 0px;
 }
 
 .home-bottom span {
-    padding: 20px;
-    width: 170px;
+    padding: 0px 0px 0px 20px;
+    width: 180px;
     font-size: 23px;
     line-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .home-bottom span strong {
-    padding: 0px;
+    padding-left: 5px;
 }
 
 .bottom-image {
     position: relative;
-    margin-top: 40px;
-    padding: 5px;
-    border: 2px solid rgba(105, 108, 255, 1);
+    top: -25px;
+    width: 100%;
+    padding: 0px;
+    border: 2px solid #696CFF;
     border-radius: 6%;
 }
 
@@ -77,8 +79,8 @@ main{
 .decoration img {
     width: 45%;
     position: absolute;
-    top: -21%;
-    right: 20px;
+    top: -20.5%;
+    right: 10px;
 }
 
 }

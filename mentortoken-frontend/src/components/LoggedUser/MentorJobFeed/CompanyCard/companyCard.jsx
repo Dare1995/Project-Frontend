@@ -97,9 +97,9 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
                 <p className="card-desc">{job.description ? job.description : ""}</p>
                 {
                     user === "mentor" ?
-                        <div className="company-card_button">
+                        <div className="company-card-button">
                             <button
-                                className="company-card_button"
+                                className="company-card-button"
                                 type="button"
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -141,7 +141,7 @@ const CompanyCard = ({ job = {}, viewGrid = true, handleViewMore = () => { }, us
                                 }
                             </div>
                             <button
-                                className="company-card_button"
+                                className="company-card-button"
                                 type="button"
                                 onClick={(e) => {
                                     e.preventDefault();

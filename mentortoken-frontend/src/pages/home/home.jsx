@@ -13,7 +13,7 @@ const HomePage = () => {
             <Companies />
             <Features />
             <div className="home-bottom">
-                <span>Every <strong>succes</strong> is rewarded!</span>
+                <span>Every <strong>success</strong> is rewarded!</span>
                 <div className="bottom-image">
                     <img src={MentorToken} alt="mentor-background" />
                     <div className="decoration">

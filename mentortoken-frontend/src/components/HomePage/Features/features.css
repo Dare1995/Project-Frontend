@@ -1,5 +1,5 @@
 .features-container {
-    width: screen;
+    max-width: 100%;
     position: relative;
     margin: 20px;
     padding: 80px;
@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background: linear-gradient(119.44deg, #696CFF 21.89%, #9574FF 74.83%);
+    background: linear-gradient(119.44deg, #696cff 21.89%, #9574FF 74.83%);
     border-radius: 20px;
 }
 
@@ -19,11 +19,6 @@
 }
 
 .features-about {
-    /* margin: 20px 0 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     margin: 0;
     font-size: 2.2em;
     text-align: center;
@@ -53,12 +48,11 @@
 @media screen and (max-width: 700px) {
     .features-container {
         margin: 20px 0 20px 0;
-        padding: 40px 30px;
+        padding: 20px 30px;
     }
 
     .features-card-container {
-        max-width: 1600px;
-        min-width: 350px;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -67,23 +61,18 @@
     }
 
     .features-about {
-        margin: 20px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .features-about p {
-        margin: 0;
-        padding: 0;
         font-size: 30px;
         text-align: center;
-        line-height: 47px;
+        line-height: 40px;
     }
 
     .rocket {
-        right: -50px;
+        top: 20px;
+        right: -100px;
         width: 20rem;
+    }
+
+    .features-container h4 {
+        padding-top: 20px;
     }
 }

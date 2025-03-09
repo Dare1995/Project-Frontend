@@ -9,7 +9,7 @@ const BestPerfMentors = () => {
     const [filteredMentors, setFilteredMentors] = useState([{ _id: 1 }, { _id: 2 }, { _id: 3 }]);
     const [modifiedMentors, setModifiedMentors] = useState([]);
     const [fetchedAplications, setFetchedAplications] = useState(false);
-    const [token, setToken] = useState(localStorage.getItem("jwt_token"));
+    const [token, setToken] = useState("");
 
     useEffect(() => {
         if (!token) {

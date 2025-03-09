@@ -27,26 +27,3 @@ ProtectedRoutes.propTypes = {
 };
 
 export default ProtectedRoutes;
-
-// import { Navigate, useLocation } from "react-router-dom";
-// import { useAuth } from "../../hooks/authentication.jsx";
-// import PropTypes from "prop-types";
-
-// const ProtectedRoutes = ({ children }) => {
-//   const location = useLocation();
-//   const token = useAuth(); // Get the token from useAuth
-
-//   // If token is valid, return children (protected route content)
-//   if (token) {
-//     return children;
-//   }
-
-//   // Otherwise, redirect to login or the page the user came from
-//   return <Navigate to="/login" replace state={{ from: location }} />;
-// };
-
-// ProtectedRoutes.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
-
-// export default ProtectedRoutes;

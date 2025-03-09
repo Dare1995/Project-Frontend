@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import "./MentorJobFeed.css"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import CompanyCard from "../../../components/LoggedUser/MentorJobFeed/CompanyCard/companyCard.jsx"
 import DropdownIcon from "../../../images/loginpage/dropdown-Icon.jsx"
 import FiltersManu from "../../../images/loginpage/filter-menu.jsx"
 import SquareShape from "../../../images/loginpage/CombinedSquareShape.jsx"
 import ParalelShape from "../../../images/loginpage/CombinedParalelShape.jsx"
 import ViewMore from "../../../components/LoggedUser/MentorJobFeed/ViewJob/viewJob.jsx"
+import "./MentorJobFeed.css"
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
@@ -276,7 +276,7 @@ const MentorJobFeed = () => {
             </div>
           </div>
         </div>
-        <div className="company-job_feed">
+        <div className="company-job-feed">
           {
             sortedCompanyJobs.map((job) => (
 

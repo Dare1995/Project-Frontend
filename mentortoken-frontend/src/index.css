@@ -1,23 +1,24 @@
 :root {
-    font-family: "Manrope", sans-serif;
-    max-width: auto;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    }
-    
-    body {
-      width: screen;
-      margin: 0 auto;
-      padding: 0;
-      max-width: 1440px;
-    }
-    a {
-    text-decoration: none;
-    color: inherit;
-    }
-    a:hover{
-      opacity: 0.75;
-      cursor: pointer;
-      }
-  
+  font-family: "Manrope", sans-serif;
+  max-width: auto;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: screen;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}

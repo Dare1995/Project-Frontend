@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import "./Footer.css"
-import MentorLogo from "../../images/mentortoken-logo.svg?react"
+// import MentorLogo from "../../images/mentortoken-logo.svg?react"
+import MentorTokenLogo from "../MentorTokenLogo/logo.jsx"
 import LinkedInLogo from "../../images/socialmedia/LinkedInLogo.svg?react"
 import TweeterLogo from "../../images/socialmedia/TweeterLogo.svg?react"
 import FacebookLogo from "../../images/socialmedia/FacebookLogo.svg?react"
@@ -10,7 +11,7 @@ const Footer = () => {
         <footer>
             <div className="footer-container">
                 <div className="footer-logo">
-                    <MentorLogo />
+                    <MentorTokenLogo />
                     <p>With Mentor Token, every failure transforms into an opportunity for growth.</p>
                 </div>
                 <div className="footer-links">

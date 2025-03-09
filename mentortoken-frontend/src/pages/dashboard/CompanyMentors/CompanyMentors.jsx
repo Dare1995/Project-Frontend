@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useState } from "react"
+import { useLocation } from "react-router-dom"
 import MyMentors from "../../../components/LoggedUser/CompanyMentors/MyMentors/myMentors.jsx";
 import MentorStatistics from "../../../components/LoggedUser/CompanyMentors/MentorStatistics/mentorStatistics.jsx";
 import "./CompanyMentors.css"
@@ -21,7 +21,6 @@ const CompanyMentors = () => {
   const handleExitMentor = () => {
     setMentorSelected(null);
   };
-
 
   useState(() => {
     setMentorSelected(query.get("mentorId"));

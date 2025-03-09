@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-.company-job_feed {
+.company-job-feed {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

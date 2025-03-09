@@ -50,7 +50,7 @@ const MentorReviewCard = ({ mentor = {}, handleViewMentor, jobApplication = {}, 
     };
 
     return (
-        <div className="mentor-review_card">
+        <div className="mentor-review-card">
             {!mentor.skills ?
                 <div className="review-Card_Loading">
                     {

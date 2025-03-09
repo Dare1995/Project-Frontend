@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Navbar.css"
-import MentorLogo from "../../images/mentortoken-logo.svg?react"
+import MentorTokenLogo from "../MentorTokenLogo/logo.jsx"
 import Button from "../Button/Button";
 import rightArrow from "../../images/arrow-right.svg"
 
@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <Link to="/"><MentorLogo /></Link>
+            <Link to="/"><MentorTokenLogo /></Link>
 
             <nav>
                 <ul>

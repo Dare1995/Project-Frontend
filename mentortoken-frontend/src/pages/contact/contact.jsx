@@ -1,12 +1,13 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button.jsx";
-import "./contact.css"
+import "./contact.css";
 
 const ContactPage = () => {
-
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -22,9 +23,12 @@ const ContactPage = () => {
           email,
         }),
       });
+
       const contactMessage = await contactMessageResponse.json();
+      
       if (contactMessage) {
         alert(`Message was sent to Mentor Token!`);
+        navigate("/");
       } else {
         alert(`Error, message was not sent to Mentor Token!`);
       }
@@ -35,7 +39,6 @@ const ContactPage = () => {
 
   return (
     <main>
-
       <div className="lets-talk">
         <div className="lets-talk-info">
           <h2>Let's Talk!</h2>
@@ -49,7 +52,6 @@ const ContactPage = () => {
         </div>
 
         <form className="lets-talk-form" onSubmit={sendMessage}>
-
           <div className="lets-talk-name-email">
             <input
               value={fullName}
@@ -74,25 +76,20 @@ const ContactPage = () => {
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              id=""
-              type="text"
               name="message"
               placeholder="Your message"
-              maxlength="1000"
+              maxLength="1000"
               required />
             <p>{message.length}/1000</p>
           </div>
 
           <div className="form-button">
-            <Button
-              name={"SEND MESSAGE"} width={"20%"}
-            // mySubmit={(e) => {e.preventDefault(), sendMessage()}}
-            />
+            <Button name={"SEND MESSAGE"} />
           </div>
         </form>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
